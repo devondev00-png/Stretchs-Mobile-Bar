@@ -5,83 +5,75 @@ export async function Hero() {
   const settings = await db.siteSettings.findUnique({ where: { id: "singleton" } });
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
-      <section className="relative py-20 md:py-32 overflow-hidden bg-zinc-950">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="/hero-bg.png"
-            alt="Irish Garden Wedding"
-            className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950" />
+    < div className = "absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950" />
+        </div >
+
+    <div className="container relative">
+      <div className="max-w-4xl">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 backdrop-blur border border-emerald-500/50 text-sm text-emerald-400 font-medium shadow-sm mb-6 animate-fade-in">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          Now booking for 2026 & 2027
         </div>
 
-        <div className="container relative">
-          <div className="max-w-4xl">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 backdrop-blur border border-emerald-500/50 text-sm text-emerald-400 font-medium shadow-sm mb-6 animate-fade-in">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              Now booking for 2026 & 2027
-            </div>
+        {/* Main heading */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] animate-fade-in-up">
+          <span className="text-gradient-dark">
+            {settings?.heroHeadline ?? "Premium mobile bar hire for weddings, parties & events"}
+          </span>
+        </h1>
 
-            {/* Main heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] animate-fade-in-up">
-              <span className="text-gradient-dark">
-                {settings?.heroHeadline ?? "Premium mobile bar hire for weddings, parties & events"}
-              </span>
-            </h1>
+        {/* Subheading */}
+        <p className="mt-6 text-lg md:text-xl text-zinc-600 max-w-2xl animate-fade-in-up stagger-1" style={{ animationDelay: "0.1s" }}>
+          {settings?.heroSubheadline ?? "Taps, bar counters, fridges/freezers, glassware, furniture — and experienced bartenders. Based in Limerick, available nationwide."}
+        </p>
 
-            {/* Subheading */}
-            <p className="mt-6 text-lg md:text-xl text-zinc-600 max-w-2xl animate-fade-in-up stagger-1" style={{ animationDelay: "0.1s" }}>
-              {settings?.heroSubheadline ?? "Taps, bar counters, fridges/freezers, glassware, furniture — and experienced bartenders. Based in Limerick, available nationwide."}
-            </p>
+        {/* CTA buttons */}
+        <div className="mt-8 flex flex-wrap gap-4 animate-fade-in-up stagger-2" style={{ animationDelay: "0.2s" }}>
+          <Link
+            href="/contact"
+            className="btn-primary inline-flex items-center gap-2 no-underline"
+          >
+            Request a Quote
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+          <Link
+            href="/packages"
+            className="btn-secondary inline-flex items-center gap-2 no-underline"
+          >
+            View Packages
+          </Link>
+        </div>
 
-            {/* CTA buttons */}
-            <div className="mt-8 flex flex-wrap gap-4 animate-fade-in-up stagger-2" style={{ animationDelay: "0.2s" }}>
-              <Link
-                href="/contact"
-                className="btn-primary inline-flex items-center gap-2 no-underline"
-              >
-                Request a Quote
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link
-                href="/packages"
-                className="btn-secondary inline-flex items-center gap-2 no-underline"
-              >
-                View Packages
-              </Link>
-            </div>
-
-            {/* Trust indicators */}
-            <div className="mt-12 flex flex-wrap items-center gap-6 text-sm text-zinc-500 animate-fade-in-up stagger-3" style={{ animationDelay: "0.3s" }}>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>5★ rated service</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>100+ events completed</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Professional bartenders</span>
-              </div>
-            </div>
+        {/* Trust indicators */}
+        <div className="mt-12 flex flex-wrap items-center gap-6 text-sm text-zinc-500 animate-fade-in-up stagger-3" style={{ animationDelay: "0.3s" }}>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span>5★ rated service</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span>100+ events completed</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Professional bartenders</span>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+      </section >
       );
 }
