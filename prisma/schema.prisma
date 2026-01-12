@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Package {
+  sortOrder Int @default(0)
+
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String
+  summary      String
+  description  String
+  inclusions   String
+  priceFrom    Int?
+  depositCents Int? // optional deposit amount in cents for Stripe
+  isFeatured   Boolean  @default(false)
+  images       Media[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Media {
+  sortOrder Int @default(0)
+
+  id        String   @id @default(cuid())
+  url       String
+  alt       String?
+  category  String?
+  packageId String?
+  package   Package? @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model Inquiry {
+  id          String    @id @default(cuid())
+  fullName    String
+  email       String
+  phone       String?
+  eventType   String
+  eventDate   DateTime?
+  location    String
+  guests      Int?
+  packageSlug String?
+  message     String
+  status      String    @default("new")
+  createdAt   DateTime  @default(now())
+  payments    Payment[]
+}
+
+model FAQ {
+  sortOrder Int @default(0)
+
+  id        String   @id @default(cuid())
+  question  String
+  answer    String
+  createdAt DateTime @default(now())
+}
+
+model Testimonial {
+  sortOrder Int @default(0)
+
+  id        String   @id @default(cuid())
+  name      String
+  quote     String
+  rating    Int?
+  createdAt DateTime @default(now())
+}
+
+model Payment {
+  inquiryId       String?
+  inquiry         Inquiry? @relation(fields: [inquiryId], references: [id], onDelete: SetNull)
+
+  id              String   @id @default(cuid())
+  stripeSessionId String   @unique
+  amountCents     Int
+  currency        String   @default("eur")
+  packageSlug     String?
+  customerEmail   String?
+  status          String   @default("paid") // paid/refunded/failed
+  createdAt       DateTime @default(now())
+}
+
+model SiteSettings {
+  id              String   @id @default("singleton")
+  businessName    String   @default("Stretchs Mobile Bar")
+  phone           String?
+  email           String?
+  location        String?  @default("Limerick and surrounds")
+  instagramHandle String?  @default("stretchs_mobile_bar")
+  heroHeadline    String?  @default("A premium mobile bar setup for weddings, parties, festivals & corporate events.")
+  heroSubheadline String?  @default("Taps, bar counters, fridges/freezers, glassware, furniture — and experienced bartenders.")
+  updatedAt       DateTime @updatedAt
+}
