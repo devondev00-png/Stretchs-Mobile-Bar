@@ -6,16 +6,9 @@ export async function Hero() {
 
   return (
     <section className="relative py-20 md:py-32 overflow-hidden bg-zinc-950">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <img
-          src="/stretchs_authentic_irish_tavern_hero.webp"
-          alt="Authentic Irish Tavern"
-          className="w-full h-full object-cover opacity-40 mix-blend-luminosity scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/80 via-[#050505]/60 to-[#050505]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/40 to-transparent" />
-      </div>
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-[#050505]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-900/10 to-transparent pointer-events-none" />
 
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-30 pointer-events-none">
         <div className="absolute top-20 right-20 w-80 h-80 bg-amber-600 rounded-full blur-[140px]" />
