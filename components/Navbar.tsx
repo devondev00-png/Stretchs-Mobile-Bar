@@ -15,7 +15,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/50 bg-white/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-zinc-800/50 bg-zinc-900/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link
@@ -35,14 +35,14 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="no-underline px-4 py-2 text-sm text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded-xl transition-colors"
+              className="no-underline px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-xl transition-colors"
             >
               {l.label}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="no-underline ml-2 px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-zinc-900 to-zinc-700 rounded-xl hover:opacity-90 transition-opacity shadow-sm"
+            className="no-underline ml-2 px-5 py-2.5 text-sm font-medium text-zinc-900 bg-gradient-to-r from-amber-400 to-amber-500 rounded-xl hover:opacity-90 transition-opacity shadow-sm"
           >
             Get a Quote
           </Link>
@@ -51,7 +51,7 @@ export function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 -mr-2 text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded-xl transition-colors"
+          className="md:hidden p-2 -mr-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-xl transition-colors"
           aria-label="Toggle menu"
         >
           {mobileOpen ? (
@@ -68,7 +68,7 @@ export function Navbar() {
 
       {/* Mobile navigation */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-zinc-200/50 bg-white">
+        <div className="md:hidden border-t border-zinc-800/50 bg-zinc-900">
           <nav className="container py-4 flex flex-col gap-1">
             {links.map(l => (
               <Link

@@ -27,7 +27,7 @@ export function GalleryGrid({
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {m.category && (
               <div className="absolute bottom-0 left-0 right-0 p-4">
-                <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-zinc-900">
+                <span className="inline-block px-3 py-1 bg-zinc-900/90 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-zinc-700">
                   {m.category}
                 </span>
               </div>

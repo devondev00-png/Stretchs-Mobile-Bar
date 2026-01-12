@@ -64,7 +64,7 @@ export function InquiryForm({ defaultPackage }: { defaultPackage?: string }) {
       <div className="grid md:grid-cols-2 gap-4">
         <Field label="Full name" name="fullName" required placeholder="Your name" />
         <Field label="Email" name="email" type="email" required placeholder="you@example.com" />
-        <Field label="Phone (optional)" name="phone" placeholder="+353 87 000 0000" />
+        <Field label="Phone (optional)" name="phone" placeholder="+353 87 060 9734" />
         <Field label="Event type" name="eventType" placeholder="Wedding, Birthday, Corporate..." required />
         <Field label="Event date (optional)" name="eventDate" type="date" />
         <Field label="Location" name="location" required placeholder="Venue or area" />
