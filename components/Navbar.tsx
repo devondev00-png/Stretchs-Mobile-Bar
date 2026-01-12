@@ -42,7 +42,7 @@ export function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="no-underline ml-2 px-5 py-2.5 text-sm font-medium text-zinc-900 bg-gradient-to-r from-amber-400 to-amber-500 rounded-xl hover:opacity-90 transition-opacity shadow-sm"
+            className="no-underline ml-2 px-5 py-2.5 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl hover:opacity-90 transition-opacity shadow-sm"
           >
             Get a Quote
           </Link>
