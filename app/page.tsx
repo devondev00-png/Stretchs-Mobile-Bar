@@ -67,14 +67,14 @@ export default async function HomePage() {
             ].map((x, i) => (
               <div
                 key={x.t}
-                className="card-elevated p-6 group hover:-translate-y-1 transition-all duration-300"
+                className="card-elevated p-6 group hover:-translate-y-1 transition-all duration-300 bg-zinc-900 border-zinc-800"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center text-amber-600 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-amber-900/20 flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform">
                   {x.icon}
                 </div>
-                <h3 className="mt-4 font-semibold text-zinc-900">{x.t}</h3>
-                <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
+                <h3 className="mt-4 font-semibold text-white">{x.t}</h3>
+                <p className="mt-2 text-sm text-zinc-400">{x.d}</p>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ export default async function HomePage() {
       </section>
 
       {/* Featured Packages Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-zinc-50 to-white">
+      <section className="py-16 md:py-20 bg-[#050505]">
         <div className="container">
           <SectionTitle
             title="Popular packages"
@@ -140,7 +140,7 @@ export default async function HomePage() {
 
       {/* Testimonials Section */}
       {testimonials.length > 0 && (
-        <section className="py-16 md:py-20 bg-gradient-to-b from-amber-50/50 to-white">
+        <section className="py-16 md:py-20 bg-[#050505]">
           <div className="container">
             <SectionTitle
               title="What our clients say"
@@ -170,35 +170,35 @@ export default async function HomePage() {
       {/* CTA Section */}
       <section className="py-16 md:py-20">
         <div className="container">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 p-8 md:p-12 lg:p-16">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 p-8 md:p-12 lg:p-16">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-              <div className="absolute top-10 right-10 w-64 h-64 bg-amber-400 rounded-full blur-3xl" />
-              <div className="absolute bottom-10 right-32 w-48 h-48 bg-amber-500 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-1/2 h-full opacity-20">
+              <div className="absolute top-10 right-10 w-64 h-64 bg-amber-600 rounded-full blur-[100px]" />
+              <div className="absolute bottom-10 right-32 w-48 h-48 bg-amber-900 rounded-full blur-[100px]" />
             </div>
 
             <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div className="max-w-xl">
-                <h2 className="text-2xl md:text-3xl font-semibold text-white tracking-tight">
-                  Ready to plan your event?
+                <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight">
+                  Ready to plan your 2026 event?
                 </h2>
-                <p className="mt-3 text-zinc-300">
-                  Tell us the date, location and guest count — we&apos;ll come back with options and a quote within 24 hours.
+                <p className="mt-4 text-zinc-400 text-lg">
+                  Tell us the date, location and guest count — we&apos;ll come back with options and a quote for your rustic bar setup.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-white text-zinc-900 font-medium no-underline hover:bg-zinc-100 transition-colors shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-amber-600 text-white font-bold no-underline hover:bg-amber-500 transition-colors shadow-2xl"
                 >
                   Request a Quote
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
                 <Link
                   href="/packages"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border border-zinc-600 text-white font-medium no-underline hover:bg-zinc-800 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl border-2 border-zinc-800 text-white font-bold no-underline hover:bg-zinc-800 transition-colors"
                 >
                   View Packages
                 </Link>

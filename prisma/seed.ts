@@ -14,8 +14,8 @@ async function main() {
       email: "stretchc27@icloud.com",
       location: "Servicing Limerick, Clare, Kerry & Tipperary",
       instagramHandle: "stretchs_mobile_bar",
-      heroHeadline: "Elevate Your Event with Ireland’s Premier Mobile Bar Experience.",
-      heroSubheadline: "From intimate weddings to corporate festivals — we bring the taps, the style, and the service to make your occasion unforgettable."
+      heroHeadline: "Authentic Irish Mobile Bar Hire for Weddings & Events",
+      heroSubheadline: "Now taking bookings for 2026 & 2027. We bring the authentic taps, the style, and the service to make your occasion unforgettable."
     }
   });
 

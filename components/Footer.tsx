@@ -13,7 +13,7 @@ export async function Footer() {
   ];
 
   return (
-    <footer className="border-t border-zinc-200/50 bg-gradient-to-b from-white to-zinc-50">
+    <footer className="border-t border-zinc-800 bg-[#050505] text-zinc-100">
       <div className="container py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand column */}
@@ -22,14 +22,14 @@ export async function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold shadow-sm">
                 S
               </div>
-              <span className="font-semibold text-lg text-zinc-900">
+              <span className="font-semibold text-lg text-white">
                 {s?.businessName ?? "Stretchs Mobile Bar"}
               </span>
             </Link>
-            <p className="mt-4 text-sm text-zinc-600 max-w-sm">
+            <p className="mt-4 text-sm text-zinc-400 max-w-sm">
               {s?.location
-                ? `Premium mobile bar hire & event setups in ${s.location}. Professional service for weddings, parties, and corporate events.`
-                : "Premium mobile bar hire & event setups in Limerick and surrounds. Professional service for weddings, parties, and corporate events."
+                ? `Premium mobile bar hire & event setups in ${s.location}. Now taking bookings for 2026 & 2027.`
+                : "Premium mobile bar hire & event setups. Now taking bookings for 2026 & 2027."
               }
             </p>
 
@@ -40,7 +40,7 @@ export async function Footer() {
                   href={`https://instagram.com/${s.instagramHandle}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-zinc-100 hover:bg-zinc-200 flex items-center justify-center text-zinc-600 hover:text-zinc-900 transition-colors"
+                  className="w-10 h-10 rounded-xl bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -53,13 +53,13 @@ export async function Footer() {
 
           {/* Quick links */}
           <div>
-            <h3 className="font-semibold text-zinc-900 mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-3">
               {footerLinks.map(link => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-zinc-600 hover:text-zinc-900 no-underline transition-colors"
+                    className="text-sm text-zinc-400 hover:text-amber-500 no-underline transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -70,8 +70,8 @@ export async function Footer() {
 
           {/* Contact info */}
           <div>
-            <h3 className="font-semibold text-zinc-900 mb-4">Get in Touch</h3>
-            <ul className="space-y-3 text-sm text-zinc-600">
+            <h3 className="font-semibold text-white mb-4">Get in Touch</h3>
+            <ul className="space-y-3 text-sm text-zinc-400">
               {s?.email && (
                 <li>
                   <a
@@ -89,7 +89,7 @@ export async function Footer() {
                 <li>
                   <a
                     href={`tel:${s.phone}`}
-                    className="hover:text-zinc-900 no-underline transition-colors flex items-center gap-2"
+                    className="hover:text-amber-500 no-underline transition-colors flex items-center gap-2"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -110,12 +110,12 @@ export async function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-zinc-200/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-zinc-500">
             © {currentYear} {s?.businessName ?? "Stretchs Mobile Bar"}. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm text-zinc-500">
-            <Link href="/admin" className="hover:text-zinc-700 no-underline transition-colors">
+            <Link href="/admin" className="hover:text-zinc-300 no-underline transition-colors">
               Admin
             </Link>
           </div>
