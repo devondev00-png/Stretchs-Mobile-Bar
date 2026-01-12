@@ -26,7 +26,7 @@ export default async function PackagesPage() {
         />
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {packages.map(p => (
+          {packages.map((p: any) => (
             <PackageCard
               key={p.id}
               slug={p.slug}

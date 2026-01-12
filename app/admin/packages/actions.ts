@@ -37,10 +37,10 @@ export async function upsertPackage(formData: FormData) {
       summary: data.summary,
       description: data.description,
       inclusions: data.inclusions,
-      priceFrom: Number.isFinite(data.priceFrom as any) ? (data.priceFrom as any) : null,
-      depositCents: Number.isFinite(data.depositCents as any) ? (data.depositCents as any) : null,
+      priceFrom: Number.isFinite(data.priceFrom as number) ? (data.priceFrom as number) : null,
+      depositCents: Number.isFinite(data.depositCents as number) ? (data.depositCents as number) : null,
       isFeatured: !!data.isFeatured,
-      sortOrder: Number.isFinite(data.sortOrder as any) ? (data.sortOrder as any) : 0,
+      sortOrder: Number.isFinite(data.sortOrder as number) ? (data.sortOrder as number) : 0,
     },
     create: {
       slug: data.slug,
@@ -48,10 +48,10 @@ export async function upsertPackage(formData: FormData) {
       summary: data.summary,
       description: data.description,
       inclusions: data.inclusions,
-      priceFrom: Number.isFinite(data.priceFrom as any) ? (data.priceFrom as any) : null,
-      depositCents: Number.isFinite(data.depositCents as any) ? (data.depositCents as any) : null,
+      priceFrom: Number.isFinite(data.priceFrom as number) ? (data.priceFrom as number) : null,
+      depositCents: Number.isFinite(data.depositCents as number) ? (data.depositCents as number) : null,
       isFeatured: !!data.isFeatured,
-      sortOrder: Number.isFinite(data.sortOrder as any) ? (data.sortOrder as any) : 0,
+      sortOrder: Number.isFinite(data.sortOrder as number) ? (data.sortOrder as number) : 0,
     },
   });
 
