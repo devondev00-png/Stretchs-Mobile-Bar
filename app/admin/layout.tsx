@@ -22,7 +22,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="min-h-screen bg-zinc-50">
+    <div className="min-h-screen bg-zinc-950">
       <div className="border-b bg-white">
         <div className="container h-14 flex items-center justify-between">
           <Link href="/" className="no-underline font-semibold">← Back to site</Link>
@@ -34,13 +34,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <div className="text-xs text-zinc-500 mb-2">Admin</div>
           <nav className="flex flex-col gap-1">
             {nav.map((n) => (
-              <Link key={n.href} href={n.href} className="no-underline rounded-xl px-3 py-2 hover:bg-zinc-50">
+              <Link key={n.href} href={n.href} className="no-underline rounded-xl px-3 py-2 hover:bg-zinc-800">
                 {n.label}
               </Link>
             ))}
           </nav>
           <form action="/api/auth/signout" method="post" className="mt-4">
-            <button className="w-full rounded-xl border px-3 py-2 hover:bg-zinc-50 text-sm" type="submit">
+            <button className="w-full rounded-xl border px-3 py-2 hover:bg-zinc-800 text-sm" type="submit">
               Sign out
             </button>
           </form>

@@ -39,7 +39,7 @@ export default function AdminSignIn({ searchParams }: { searchParams: { error?: 
   }
 
   return (
-    <section className="py-16 md:py-24 bg-zinc-50 min-h-screen flex items-center justify-center">
+    <section className="py-16 md:py-24 bg-zinc-950 min-h-screen flex items-center justify-center">
       <div className="container max-w-[400px]">
         <div className="card-elevated p-8 bg-white">
           <div className="text-center mb-8">
@@ -66,7 +66,7 @@ export default function AdminSignIn({ searchParams }: { searchParams: { error?: 
           <div className="grid gap-4">
             <button
               onClick={() => signIn("google", { callbackUrl: from })}
-              className="w-full flex items-center justify-center gap-2 rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300 transition-all"
+              className="w-full flex items-center justify-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-3 text-sm font-medium text-zinc-300 hover:bg-zinc-800 hover:border-zinc-700 transition-all"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
