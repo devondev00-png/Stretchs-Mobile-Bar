@@ -41,9 +41,11 @@ export default function ClientUpload() {
       await addMedia({ url: up.secure_url, alt: alt || undefined, category: category || undefined });
       setMsg("Uploaded!");
       setFile(null);
-      (document.getElementById("file") as HTMLInputElement | null)?.value && ((document.getElementById("file") as HTMLInputElement).value = "");
-    } catch (e: any) {
-      setMsg(e.message || "Error");
+      const fileInput = document.getElementById("file") as HTMLInputElement | null;
+      if (fileInput) fileInput.value = "";
+    } catch (e: unknown) {
+      const error = e as Error;
+      setMsg(error.message || "Error");
     } finally {
       setLoading(false);
     }

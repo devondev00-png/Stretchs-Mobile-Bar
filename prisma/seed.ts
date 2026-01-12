@@ -10,8 +10,8 @@ async function main() {
     create: {
       id: 'singleton',
       businessName: "Stretchs Mobile Bar",
-      phone: "087 060 9734",
-      email: "info@stretchsmobilebar.ie",
+      phone: "+353 87 060 9734",
+      email: "stretchc27@icloud.com",
       location: "Servicing Limerick, Clare, Kerry & Tipperary",
       instagramHandle: "stretchs_mobile_bar",
       heroHeadline: "Elevate Your Event with Ireland’s Premier Mobile Bar Experience.",
