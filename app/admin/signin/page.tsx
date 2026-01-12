@@ -39,17 +39,17 @@ export default function AdminSignIn({ searchParams }: { searchParams: { error?: 
   }
 
   return (
-    <section className="py-16 md:py-24 bg-zinc-950 min-h-screen flex items-center justify-center">
+    <section className="py-16 md:py-24 bg-zinc-50 min-h-screen flex items-center justify-center">
       <div className="container max-w-[400px]">
-        <div className="card-elevated p-8 bg-zinc-900 border border-zinc-800">
+        <div className="card-elevated p-8 bg-white">
           <div className="text-center mb-8">
             <Link href="/" className="inline-block no-underline">
               <div className="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-sm mb-4">
                 S
               </div>
             </Link>
-            <h1 className="text-2xl font-semibold tracking-tight text-white">Admin Sign In</h1>
-            <p className="mt-2 text-sm text-zinc-400">Enter your details to access the dashboard</p>
+            <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">Admin Sign In</h1>
+            <p className="mt-2 text-sm text-zinc-600">Enter your details to access the dashboard</p>
           </div>
 
           {err && (
@@ -79,22 +79,22 @@ export default function AdminSignIn({ searchParams }: { searchParams: { error?: 
 
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t border-zinc-800" />
+                <span className="w-full border-t border-zinc-200" />
               </div>
-              <div className="relative flex justify-center text-xs uppercase px-4">
-                <span className="bg-zinc-900 text-zinc-500">Or continue with email</span>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-white px-2 text-zinc-500">Or continue with email</span>
               </div>
             </div>
 
-            <form onSubmit={handleCredentials} className="grid gap-4">
+            <form onSubmit={handleCredentials} className="grid gap-3">
               <div>
                 <label className="sr-only">Email</label>
                 <input
                   name="email"
                   type="email"
                   required
-                  placeholder="enquiries@stretchs.ie"
-                  className="w-full rounded-xl border border-zinc-800 bg-zinc-950 text-white px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all placeholder:text-zinc-600"
+                  placeholder="name@example.com"
+                  className="w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all"
                 />
               </div>
               <div>
@@ -103,13 +103,13 @@ export default function AdminSignIn({ searchParams }: { searchParams: { error?: 
                   name="password"
                   type="password"
                   required
-                  placeholder="••••••••"
-                  className="w-full rounded-xl border border-zinc-800 bg-zinc-950 text-white px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all placeholder:text-zinc-600"
+                  placeholder="Password"
+                  className="w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all"
                 />
               </div>
               <button
                 disabled={loading}
-                className="w-full rounded-xl bg-amber-600 text-white px-4 py-3 text-sm font-bold hover:bg-amber-500 transition-colors disabled:opacity-60 shadow-lg shadow-amber-900/20"
+                className="w-full rounded-xl bg-zinc-900 text-white px-4 py-3 text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-60"
                 type="submit"
               >
                 {loading ? "Signing in..." : "Sign In with Email"}

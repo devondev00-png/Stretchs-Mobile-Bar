@@ -8,14 +8,14 @@ export function TestimonialCard({
     rating?: number | null;
 }) {
     return (
-        <div className="card-elevated p-6 flex flex-col h-full bg-zinc-900 border-zinc-800">
+        <div className="card-elevated p-6 flex flex-col h-full">
             {/* Rating stars */}
             {rating && (
                 <div className="flex gap-1 mb-4">
                     {[1, 2, 3, 4, 5].map((star) => (
                         <svg
                             key={star}
-                            className={`w-5 h-5 ${star <= rating ? "text-amber-500" : "text-zinc-800"}`}
+                            className={`w-5 h-5 ${star <= rating ? "text-amber-400" : "text-zinc-200"}`}
                             fill="currentColor"
                             viewBox="0 0 20 20"
                         >
@@ -27,16 +27,16 @@ export function TestimonialCard({
 
             {/* Quote */}
             <blockquote className="flex-1">
-                <p className="text-zinc-400 leading-relaxed italic">&quot;{quote}&quot;</p>
+                <p className="text-zinc-700 leading-relaxed italic">&quot;{quote}&quot;</p>
             </blockquote>
 
             {/* Author */}
-            <div className="mt-4 pt-4 border-t border-zinc-800 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-amber-500 font-bold text-sm border border-zinc-700">
+            <div className="mt-4 pt-4 border-t border-zinc-100 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center text-amber-700 font-semibold text-sm">
                     {name.charAt(0).toUpperCase()}
                 </div>
                 <div>
-                    <div className="font-medium text-white">{name}</div>
+                    <div className="font-medium text-zinc-900">{name}</div>
                     <div className="text-sm text-zinc-500">Verified Customer</div>
                 </div>
             </div>

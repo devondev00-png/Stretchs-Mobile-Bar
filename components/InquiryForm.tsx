@@ -38,16 +38,16 @@ export function InquiryForm({ defaultPackage }: { defaultPackage?: string }) {
 
   if (ok) {
     return (
-      <div className="card-elevated p-8 text-center bg-zinc-900 border-zinc-800">
-        <div className="w-16 h-16 mx-auto rounded-full bg-emerald-900/20 flex items-center justify-center text-emerald-500 mb-4">
+      <div className="card-elevated p-8 text-center">
+        <div className="w-16 h-16 mx-auto rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 mb-4">
           <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-semibold text-white">Thanks — we&apos;ve got your request!</h3>
-        <p className="mt-2 text-zinc-400">We&apos;ll reply within 24 hours to confirm availability for 2026/2027.</p>
+        <h3 className="text-xl font-semibold text-zinc-900">Thanks — we&apos;ve got your request!</h3>
+        <p className="mt-2 text-zinc-600">We&apos;ll reply within 24 hours to confirm availability and pricing.</p>
         <button
-          className="mt-6 px-6 py-3 rounded-2xl border-2 border-zinc-800 bg-zinc-900 hover:bg-zinc-800 text-white font-bold transition-all"
+          className="mt-6 px-6 py-3 rounded-2xl border-2 border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 font-medium transition-all"
           onClick={() => setOk(false)}
         >
           Send another enquiry
@@ -57,7 +57,7 @@ export function InquiryForm({ defaultPackage }: { defaultPackage?: string }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="card-elevated p-6 md:p-8 grid gap-5 bg-zinc-900 border-zinc-800">
+    <form onSubmit={onSubmit} className="card-elevated p-6 md:p-8 grid gap-5">
       {/* Honeypot field */}
       <input name="company" className="hidden" tabIndex={-1} autoComplete="off" />
 
@@ -73,12 +73,12 @@ export function InquiryForm({ defaultPackage }: { defaultPackage?: string }) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-zinc-300 mb-2">Message</label>
+        <label className="block text-sm font-medium text-zinc-700 mb-2">Message</label>
         <textarea
           name="message"
           required
           minLength={10}
-          className="w-full rounded-xl border border-zinc-800 bg-zinc-950 text-white px-4 py-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all resize-none placeholder:text-zinc-600"
+          className="w-full rounded-xl border border-zinc-200 px-4 py-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all resize-none"
           rows={5}
           placeholder="Tell us about your event, timings, theme, and any add-ons you&apos;re interested in."
         />
@@ -137,14 +137,14 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-sm font-medium text-zinc-300 mb-2">{label}</label>
+      <label className="block text-sm font-medium text-zinc-700 mb-2">{label}</label>
       <input
         name={name}
         type={type}
         required={required}
         placeholder={placeholder}
         defaultValue={defaultValue}
-        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 text-white px-4 py-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all placeholder:text-zinc-600"
+        className="w-full rounded-xl border border-zinc-200 px-4 py-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all"
       />
     </div>
   );

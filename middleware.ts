@@ -17,9 +17,8 @@ export async function middleware(req: NextRequest) {
   }
 
   // Optional allowlist check for extra safety
-  const allow = (process.env.ADMIN_ALLOWLIST_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
-  const email = (token.email as string | undefined)?.toLowerCase() || "";
-
+  const allow = (process.env.ADMIN_ALLOWLIST_EMAILS || "").split(",").map(s => s.trim()).filter(Boolean);
+  const email = (token.email as string | undefined) || "";
   if (allow.length > 0 && email && !allow.includes(email)) {
     const url = req.nextUrl.clone();
     url.pathname = "/admin/signin";

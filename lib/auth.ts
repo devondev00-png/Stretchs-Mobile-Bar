@@ -5,15 +5,9 @@ import bcrypt from "bcryptjs";
 
 function allowEmail(email?: string | null) {
   if (!email) return false;
-  const allow = (process.env.ADMIN_ALLOWLIST_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
-
-  // FAIL SAFE: If no allowlist is set in production, deny all access.
-  if (allow.length === 0) {
-    console.warn("ADMIN_ALLOWLIST_EMAILS is not set. Admin access is disabled.");
-    return false;
-  }
-
-  return allow.includes(email.toLowerCase());
+  const allow = (process.env.ADMIN_ALLOWLIST_EMAILS || "").split(",").map(s => s.trim()).filter(Boolean);
+  if (allow.length === 0) return true; // if no allowlist set, allow all authenticated
+  return allow.includes(email);
 }
 
 export const authOptions: NextAuthOptions = {

@@ -2,12 +2,12 @@ import { db } from "@/lib/db";
 
 export async function InstagramEmbed() {
   // Instagram embeds can be blocked by browser privacy settings; provide a strong fallback.
-  const s = await db.siteSettings.findUnique({ where: { id: "singleton" } });
+    const s = await db.siteSettings.findUnique({ where: { id: "singleton" } });
   const handle = s?.instagramHandle || "stretchs_mobile_bar";
   const url = `https://www.instagram.com/${handle}/`;
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
+    <div className="rounded-2xl border bg-white p-6">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="font-semibold">Instagram</div>

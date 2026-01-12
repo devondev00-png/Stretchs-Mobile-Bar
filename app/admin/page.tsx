@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { db } from "@/lib/db";
 
 export default async function AdminDashboard() {
@@ -12,7 +11,7 @@ export default async function AdminDashboard() {
 
   return (
     <div className="grid gap-6">
-      <h1 className="text-2xl font-semibold tracking-tight text-white">Dashboard</h1>
+      <h1 className="text-2xl font-semibold tracking-tight">Dashboard</h1>
 
       <div className="grid gap-4 md:grid-cols-3">
         <Card title="Packages" value={pkgCount} />
@@ -20,20 +19,20 @@ export default async function AdminDashboard() {
         <Card title="Inquiries" value={inquiryCount} />
       </div>
 
-      <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-        <div className="font-semibold text-white">Latest inquiries</div>
+      <div className="rounded-2xl border bg-white p-6">
+        <div className="font-semibold">Latest inquiries</div>
         <div className="mt-4 grid gap-3">
-          {latest.map((i: any) => (
-            <div key={i.id} className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
+          {latest.map(i => (
+            <div key={i.id} className="rounded-xl border p-4">
               <div className="flex items-center justify-between gap-3">
-                <div className="font-medium text-white">{i.fullName} <span className="text-zinc-500 text-sm">({i.eventType})</span></div>
-                <span className="text-xs rounded-full border border-zinc-700 bg-zinc-800 px-2 py-1 text-zinc-400">{i.status}</span>
+                <div className="font-medium">{i.fullName} <span className="text-zinc-500 text-sm">({i.eventType})</span></div>
+                <span className="text-xs rounded-full border px-2 py-1">{i.status}</span>
               </div>
-              <div className="mt-1 text-sm text-zinc-400">{i.email} • {i.location}</div>
-              <div className="mt-2 text-sm text-zinc-500 line-clamp-2">{i.message}</div>
+              <div className="mt-1 text-sm text-zinc-600">{i.email} • {i.location}</div>
+              <div className="mt-2 text-sm text-zinc-700 line-clamp-2">{i.message}</div>
             </div>
           ))}
-          {latest.length === 0 ? <div className="text-sm text-zinc-500">No inquiries yet.</div> : null}
+          {latest.length === 0 ? <div className="text-sm text-zinc-600">No inquiries yet.</div> : null}
         </div>
       </div>
     </div>
@@ -42,9 +41,9 @@ export default async function AdminDashboard() {
 
 function Card({ title, value }: { title: string; value: number }) {
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
+    <div className="rounded-2xl border bg-white p-6">
       <div className="text-sm text-zinc-500">{title}</div>
-      <div className="mt-2 text-3xl font-semibold text-white">{value}</div>
+      <div className="mt-2 text-3xl font-semibold">{value}</div>
     </div>
   );
 }
