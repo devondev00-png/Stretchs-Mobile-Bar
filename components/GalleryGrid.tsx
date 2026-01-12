@@ -8,7 +8,7 @@ export function GalleryGrid({
 }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-      {items.map((m, i) => (
+      {items.map((m) => (
         <div
           key={m.id}
           className="group relative rounded-2xl overflow-hidden border border-zinc-200/50 bg-zinc-100 img-shine"

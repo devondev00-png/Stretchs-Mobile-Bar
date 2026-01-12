@@ -24,7 +24,7 @@ export default async function FAQPage() {
         />
 
         <div className="grid gap-3">
-          {faqs.map((f, i) => (
+          {faqs.map((f: any) => (
             <details
               key={f.id}
               className="group card-elevated overflow-hidden"
@@ -62,7 +62,7 @@ export default async function FAQPage() {
         <div className="mt-12 rounded-2xl bg-gradient-to-b from-zinc-50 to-white border p-8 text-center">
           <h3 className="text-xl font-semibold text-zinc-900">Still have questions?</h3>
           <p className="mt-2 text-zinc-600">
-            We're happy to help. Send us a message and we'll get back to you within 24 hours.
+            We&apos;re happy to help. Send us a message and we&apos;ll get back to you within 24 hours.
           </p>
           <Link
             href="/contact"

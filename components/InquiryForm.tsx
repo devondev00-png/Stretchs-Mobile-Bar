@@ -28,8 +28,9 @@ export function InquiryForm({ defaultPackage }: { defaultPackage?: string }) {
       }
       setOk(true);
       e.currentTarget.reset();
-    } catch (e: any) {
-      setErr(e.message || "Something went wrong");
+    } catch (e: unknown) {
+      const error = e as Error;
+      setErr(error.message || "Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -43,8 +44,8 @@ export function InquiryForm({ defaultPackage }: { defaultPackage?: string }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-semibold text-zinc-900">Thanks — we've got your request!</h3>
-        <p className="mt-2 text-zinc-600">We'll reply within 24 hours to confirm availability and pricing.</p>
+        <h3 className="text-xl font-semibold text-zinc-900">Thanks — we&apos;ve got your request!</h3>
+        <p className="mt-2 text-zinc-600">We&apos;ll reply within 24 hours to confirm availability and pricing.</p>
         <button
           className="mt-6 px-6 py-3 rounded-2xl border-2 border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 font-medium transition-all"
           onClick={() => setOk(false)}
@@ -79,7 +80,7 @@ export function InquiryForm({ defaultPackage }: { defaultPackage?: string }) {
           minLength={10}
           className="w-full rounded-xl border border-zinc-200 px-4 py-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all resize-none"
           rows={5}
-          placeholder="Tell us about your event, timings, theme, and any add-ons you're interested in."
+          placeholder="Tell us about your event, timings, theme, and any add-ons you&apos;re interested in."
         />
       </div>
 

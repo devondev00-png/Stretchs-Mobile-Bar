@@ -12,7 +12,7 @@ export default function NotFound() {
                 </h1>
                 <h2 className="mt-4 text-2xl font-semibold text-zinc-900">Page not found</h2>
                 <p className="mt-2 text-zinc-600 max-w-md">
-                    Sorry, we couldn't find the page you're looking for. It seems the bar has moved to a new location.
+                    Sorry, we couldn&apos;t find the page you&apos;re looking for. It seems the bar has moved to a new location.
                 </p>
                 <Link
                     href="/"

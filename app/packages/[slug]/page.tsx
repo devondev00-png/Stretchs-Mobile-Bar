@@ -70,7 +70,7 @@ export default async function PackageDetail({ params, searchParams }: { params: 
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
           <div className="lg:col-span-2 rounded-2xl border bg-gradient-to-b from-white to-zinc-50/50 p-6 md:p-8">
-            <div className="font-semibold text-lg">What's included</div>
+            <div className="font-semibold text-lg">What&apos;s included</div>
             <div className="mt-4 space-y-2">
               {pkg.inclusions.split('\n').map((line: string, i: number) => (
                 <div key={i} className="flex items-start gap-3 text-zinc-700">
@@ -92,7 +92,7 @@ export default async function PackageDetail({ params, searchParams }: { params: 
           <div className="rounded-2xl border bg-gradient-to-b from-amber-50/50 to-white p-6 h-fit sticky top-20">
             <div className="font-semibold text-lg">Ready to book?</div>
             <p className="mt-2 text-sm text-zinc-600">
-              Send an enquiry and we'll confirm availability and final quote for your event.
+              Send an enquiry and we&apos;ll confirm availability and final quote for your event.
             </p>
 
             {pkg.priceFrom && (

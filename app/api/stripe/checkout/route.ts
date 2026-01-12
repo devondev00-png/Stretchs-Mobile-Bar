@@ -33,10 +33,11 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ url });
-  } catch (error: any) {
-    console.error("Stripe checkout error:", error);
+  } catch (error: unknown) {
+    const err = error as Error;
+    console.error("Stripe checkout error:", err);
     return NextResponse.json(
-      { error: error.message || "Failed to create checkout session" },
+      { error: err.message || "Failed to create checkout session" },
       { status: 500 }
     );
   }

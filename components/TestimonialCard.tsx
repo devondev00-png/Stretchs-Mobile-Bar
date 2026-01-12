@@ -27,7 +27,7 @@ export function TestimonialCard({
 
             {/* Quote */}
             <blockquote className="flex-1">
-                <p className="text-zinc-700 leading-relaxed italic">"{quote}"</p>
+                <p className="text-zinc-700 leading-relaxed italic">&quot;{quote}&quot;</p>
             </blockquote>
 
             {/* Author */}

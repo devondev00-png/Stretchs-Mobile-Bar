@@ -75,10 +75,14 @@ export function PackageEditor({
   );
 }
 
-function Field(props: any) {
+interface FieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+}
+
+function Field({ label, ...props }: FieldProps) {
   return (
     <div className="grid gap-2">
-      <label className="text-sm font-medium">{props.label}</label>
+      <label className="text-sm font-medium">{label}</label>
       <input {...props} className="rounded-xl border px-3 py-2" />
     </div>
   );

@@ -54,7 +54,7 @@ export default async function PackagesPage() {
         <div className="mt-12 rounded-2xl bg-gradient-to-b from-amber-50 to-white border border-amber-100 p-8 text-center">
           <h3 className="text-xl font-semibold text-zinc-900">Need something custom?</h3>
           <p className="mt-2 text-zinc-600 max-w-lg mx-auto">
-            We can create bespoke packages for larger events, festivals, or unique requirements. Get in touch and tell us what you're planning.
+            We can create bespoke packages for larger events, festivals, or unique requirements. Get in touch and tell us what you&apos;re planning.
           </p>
           <a
             href="/contact"

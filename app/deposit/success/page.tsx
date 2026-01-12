@@ -21,7 +21,7 @@ export default function DepositSuccess({ searchParams }: { searchParams: { sessi
             Deposit received 🎉
           </h1>
           <p className="mt-3 text-zinc-600">
-            Thanks — your deposit has been processed successfully. We'll be in touch shortly to confirm the final details for your event.
+            Thanks — your deposit has been processed successfully. We&apos;ll be in touch shortly to confirm the final details for your event.
           </p>
 
           {searchParams.session_id && (
@@ -48,7 +48,7 @@ export default function DepositSuccess({ searchParams }: { searchParams: { sessi
           </div>
 
           <p className="mt-6 text-sm text-zinc-500">
-            Questions? Email us and we'll help you out.
+            Questions? Email us and we&apos;ll help you out.
           </p>
         </div>
       </div>

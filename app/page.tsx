@@ -183,7 +183,7 @@ export default async function HomePage() {
                   Ready to plan your event?
                 </h2>
                 <p className="mt-3 text-zinc-300">
-                  Tell us the date, location and guest count — we'll come back with options and a quote within 24 hours.
+                  Tell us the date, location and guest count — we&apos;ll come back with options and a quote within 24 hours.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">

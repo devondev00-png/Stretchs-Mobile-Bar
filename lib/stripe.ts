@@ -12,7 +12,7 @@ export async function createCheckoutSession({
   metadata?: Record<string, string>;
 }) {
   if (!stripeSecret) throw new Error("Missing STRIPE_SECRET_KEY");
-  const stripe = new Stripe(stripeSecret, { apiVersion: "2024-06-20" as any });
+  const stripe = new Stripe(stripeSecret, { apiVersion: "2024-06-20" });
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 

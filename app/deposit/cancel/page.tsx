@@ -21,7 +21,7 @@ export default function DepositCancel() {
             Deposit cancelled
           </h1>
           <p className="mt-3 text-zinc-600">
-            No worries — no payment was taken. You can try again whenever you're ready, or just send us a standard enquiry without a deposit.
+            No worries — no payment was taken. You can try again whenever you&apos;re ready, or just send us a standard enquiry without a deposit.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">

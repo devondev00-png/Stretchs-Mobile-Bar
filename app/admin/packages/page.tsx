@@ -9,12 +9,12 @@ export default async function AdminPackages() {
     <div className="grid gap-6">
       <h1 className="text-2xl font-semibold tracking-tight">Packages</h1>
 
-      <PackageEditor packages={packages as any} upsertAction={upsertPackage} />
+      <PackageEditor packages={packages} upsertAction={upsertPackage} />
 
       <div className="rounded-2xl border bg-white p-6">
         <div className="font-semibold">Existing packages</div>
         <div className="mt-4 grid gap-3">
-          {packages.map(p => (
+          {packages.map((p: any) => (
             <div key={p.id} className="rounded-xl border p-4 flex items-start justify-between gap-4">
               <div>
                 <div className="font-medium">{p.title}</div>
@@ -25,10 +25,10 @@ export default async function AdminPackages() {
                 <a className="rounded-xl border px-3 py-2 hover:bg-zinc-50 text-sm no-underline" href={`/admin/packages/${p.slug}/images`}>Manage images</a>
                 <form action={async () => { "use server"; await deletePackage(p.slug); }}>
 
-                <button className="rounded-xl border px-3 py-2 hover:bg-zinc-50 text-sm" type="submit">
-                  Delete
-                </button>
-              </form>
+                  <button className="rounded-xl border px-3 py-2 hover:bg-zinc-50 text-sm" type="submit">
+                    Delete
+                  </button>
+                </form>
               </div>
             </div>
           ))}
@@ -39,11 +39,3 @@ export default async function AdminPackages() {
   );
 }
 
-function Field(props: any) {
-  return (
-    <div className="grid gap-2">
-      <label className="text-sm font-medium">{props.label}</label>
-      <input {...props} className="rounded-xl border px-3 py-2" />
-    </div>
-  );
-}

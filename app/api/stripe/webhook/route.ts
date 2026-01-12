@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Stripe env missing" }, { status: 500 });
   }
 
-  const stripe = new Stripe(secret, { apiVersion: "2024-06-20" as any });
+  const stripe = new Stripe(secret, { apiVersion: "2024-06-20" });
 
   const sig = req.headers.get("stripe-signature");
   if (!sig) return NextResponse.json({ error: "Missing signature" }, { status: 400 });
@@ -22,8 +22,9 @@ export async function POST(req: Request) {
   let event: Stripe.Event;
   try {
     event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
-  } catch (err: any) {
-    return NextResponse.json({ error: `Webhook Error: ${err.message}` }, { status: 400 });
+  } catch (err: unknown) {
+    const error = err as Error;
+    return NextResponse.json({ error: `Webhook Error: ${error.message}` }, { status: 400 });
   }
 
   // Handle completed checkout sessions (deposit payments)
