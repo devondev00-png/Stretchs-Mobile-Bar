@@ -39,21 +39,17 @@ export default function AdminSignIn({ searchParams }: { searchParams: { error?: 
   }
 
   return (
-    <section className="py-20 md:py-32 bg-[#050505] min-h-screen flex items-center justify-center">
+    <section className="py-16 md:py-24 bg-zinc-950 min-h-screen flex items-center justify-center">
       <div className="container max-w-[400px]">
-        <div className="card-elevated p-8 bg-zinc-900 border border-zinc-800 shadow-2xl">
-          <div className="text-center mb-10">
+        <div className="card-elevated p-8 bg-zinc-900 border border-zinc-800">
+          <div className="text-center mb-8">
             <Link href="/" className="inline-block no-underline">
-              <div className="relative w-20 h-20 mx-auto mb-6">
-                <img
-                  src="/logo.jpg"
-                  alt="Stretchs Mobile Bar"
-                  className="w-full h-full object-contain rounded-full border-2 border-amber-600/30 shadow-lg shadow-amber-900/20"
-                />
+              <div className="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-sm mb-4">
+                S
               </div>
             </Link>
-            <h1 className="text-3xl font-bold tracking-tight text-white italic">Admin Portal</h1>
-            <p className="mt-2 text-zinc-400">Secure access for Stretch&apos;s Mobile Bar</p>
+            <h1 className="text-2xl font-semibold tracking-tight text-white">Admin Sign In</h1>
+            <p className="mt-2 text-sm text-zinc-400">Enter your details to access the dashboard</p>
           </div>
 
           {err && (

@@ -5,7 +5,7 @@ export async function Hero() {
   const settings = await db.siteSettings.findUnique({ where: { id: "singleton" } });
 
   return (
-    <section className="relative py-24 md:py-40 overflow-hidden bg-zinc-950">
+    <section className="relative py-20 md:py-32 overflow-hidden bg-zinc-950">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
