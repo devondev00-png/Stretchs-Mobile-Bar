@@ -21,7 +21,7 @@ export function Navbar() {
           href="/"
           className="no-underline font-semibold text-lg tracking-tight flex items-center gap-3 group"
         >
-          <div className="relative h-16 w-auto">
+          <div className="relative h-12 w-auto">
             <img
               src="/logo.png"
               alt="Stretchs Mobile Bar Logo"
