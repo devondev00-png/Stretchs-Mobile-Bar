@@ -23,7 +23,7 @@ export async function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
             </span>
-            Now booking for 2025 & 2026
+            Now booking for 2026 & 2027
           </div>
 
           {/* Main heading */}
