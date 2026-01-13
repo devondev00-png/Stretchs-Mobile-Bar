@@ -19,10 +19,10 @@ export async function Hero() {
       <div className="container relative">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 backdrop-blur border border-emerald-500/50 text-sm text-emerald-400 font-medium shadow-sm mb-6 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 backdrop-blur border border-amber-500/50 text-sm text-amber-400 font-medium shadow-sm mb-6 animate-fade-in">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
             </span>
             Now booking for 2026 & 2027
           </div>
@@ -41,7 +41,7 @@ export async function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="no-underline inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-zinc-900 font-medium hover:opacity-90 transition-opacity shadow-lg"
+              className="no-underline inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-zinc-900 font-medium hover:opacity-90 transition-opacity shadow-lg"
             >
               Request a Quote
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

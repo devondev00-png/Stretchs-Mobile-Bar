@@ -22,11 +22,12 @@ export function Navbar() {
           href="/"
           className="no-underline font-semibold text-lg tracking-tight flex items-center gap-3 group"
         >
-          <div className="relative h-20 w-auto">
+          <div className="relative h-16 w-auto">
+            <div className="absolute inset-0 bg-white rounded-full" />
             <img
               src="/logo.png"
               alt="Stretchs Mobile Bar Logo"
-              className="h-full w-auto object-contain group-hover:scale-105 transition-transform"
+              className="relative h-full w-auto object-contain group-hover:scale-105 transition-transform"
             />
           </div>
           <span className="hidden sm:inline text-zinc-900">Stretchs Mobile Bar</span>
@@ -46,7 +47,7 @@ export function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="no-underline ml-2 px-5 py-2.5 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl hover:opacity-90 transition-opacity shadow-sm"
+            className="no-underline ml-2 px-5 py-2.5 text-sm font-medium text-zinc-900 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl hover:opacity-90 transition-opacity shadow-sm"
           >
             Get a Quote
           </Link>
