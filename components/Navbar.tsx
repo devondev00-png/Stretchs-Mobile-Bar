@@ -23,11 +23,10 @@ export function Navbar() {
           className="no-underline font-semibold text-lg tracking-tight flex items-center gap-3 group"
         >
           <div className="relative h-16 w-auto">
-            <div className="absolute inset-0 bg-white rounded-full" />
             <img
-              src="/logo.png"
+              src="/logo.jpg"
               alt="Stretchs Mobile Bar Logo"
-              className="relative h-full w-auto object-contain group-hover:scale-105 transition-transform"
+              className="h-full w-auto object-contain group-hover:scale-105 transition-transform rounded-lg"
             />
           </div>
           <span className="hidden sm:inline text-zinc-900">Stretchs Mobile Bar</span>

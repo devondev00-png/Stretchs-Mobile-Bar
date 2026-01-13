@@ -29,7 +29,7 @@ export default async function HomePage() {
       <Hero />
 
       {/* Services Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-black">
         <div className="container">
           <SectionTitle
             title="What we offer"
@@ -116,7 +116,7 @@ export default async function HomePage() {
 
       {/* Gallery Preview Section */}
       {galleryPreview.length > 0 && (
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-20 bg-black">
           <div className="container">
             <SectionTitle
               title="Our work"
@@ -161,14 +161,14 @@ export default async function HomePage() {
       )}
 
       {/* Instagram Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-black">
         <div className="container">
           <InstagramEmbed />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-black">
         <div className="container">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 p-8 md:p-12 lg:p-16">
             {/* Decorative elements */}
