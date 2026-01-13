@@ -20,10 +20,14 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="no-underline font-semibold text-lg tracking-tight flex items-center gap-2 group"
+          className="no-underline font-semibold text-lg tracking-tight flex items-center gap-3 group"
         >
-          <div className="relative h-20 w-auto rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:shadow-md transition-shadow">
-            S
+          <div className="relative h-20 w-auto">
+            <img
+              src="/logo.png"
+              alt="Stretchs Mobile Bar Logo"
+              className="h-full w-auto object-contain group-hover:scale-105 transition-transform"
+            />
           </div>
           <span className="hidden sm:inline text-zinc-900">Stretchs Mobile Bar</span>
           <span className="sm:hidden text-zinc-900">Stretchs</span>
