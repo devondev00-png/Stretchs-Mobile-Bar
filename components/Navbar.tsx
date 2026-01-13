@@ -22,7 +22,7 @@ export function Navbar() {
           href="/"
           className="no-underline font-semibold text-lg tracking-tight flex items-center gap-2 group"
         >
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:shadow-md transition-shadow">
+          <div className="relative h-20 w-auto rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:shadow-md transition-shadow">
             S
           </div>
           <span className="hidden sm:inline text-zinc-900">Stretchs Mobile Bar</span>

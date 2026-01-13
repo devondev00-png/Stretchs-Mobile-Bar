@@ -5,12 +5,12 @@
 /* Premium Design System */
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    /* zinc-950 */
+    --background: 0 0% 0%;
+    /* pure black */
     --foreground: 0 0% 98%;
     /* white */
-    --card: 240 10% 10%;
-    /* zinc-900 */
+    --card: 240 10% 5%;
+    /* darker zinc-950 */
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 10%;
     --popover-foreground: 0 0% 98%;
@@ -41,7 +41,7 @@ body {
 }
 
 body {
-  @apply bg-zinc-950 text-white;
+  @apply bg-black text-white;
   font-feature-settings: "rlig" 1, "calt" 1;
   font-variation-settings: "opsz" 32;
 }
